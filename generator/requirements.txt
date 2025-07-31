@@ -1,0 +1,24 @@
+# Core dependencies
+pandas
+numpy
+scikit-learn
+openai
+requests
+boto3
+
+# Logging
+python-json-logger
+
+# Environment variable support
+python-dotenv
+
+# API service
+fastapi
+uvicorn
+
+# Optional visualization (MVP)
+streamlit
+
+pika
+statsmodels
+torch

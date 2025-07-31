@@ -1,0 +1,176 @@
+[
+  {
+    "id": "generator-1",
+    "name": "Normal Environment Sensor",
+    "description": "Standard environmental monitoring with balanced alert frequency",
+    "sensors": {
+      "pm2_5": {
+        "normal_range": [10, 25],
+        "alert_range": [50, 100],
+        "current_value": 17.5,
+        "noise_level": 0.02,
+        "fluctuation_range": 0.05
+      },
+      "pm10": {
+        "normal_range": [20, 50],
+        "alert_range": [100, 200],
+        "current_value": 35.0,
+        "noise_level": 0.02,
+        "fluctuation_range": 0.05
+      },
+      "dBA": {
+        "normal_range": [60, 75],
+        "alert_range": [85, 95],
+        "current_value": 67.5,
+        "noise_level": 0.01,
+        "fluctuation_range": 0.03
+      },
+      "vibration": {
+        "normal_range": [0.01, 0.05],
+        "alert_range": [0.1, 0.3],
+        "current_value": 0.03,
+        "noise_level": 0.1,
+        "fluctuation_range": 0.2
+      }
+    },
+    "frequencies": {
+      "anomaly_every": [100, 200],
+      "alert_every": [300, 600],
+      "drift_chance": 0.005,
+      "drift_duration": [100, 200]
+    },
+    "anomaly_behavior": {
+      "spike_multiplier": [1.5, 3.0],
+      "drop_multiplier": [0.1, 0.5],
+      "spike_chance": 0.5
+    },
+    "drift_behavior": {
+      "amount_range": [0.001, 0.003],
+      "description": "Drift amount as percentage per reading"
+    },
+    "value_validation": {
+      "pm2_5": {"min": 0.1, "max": 1000},
+      "pm10": {"min": 0.1, "max": 2000},
+      "dBA": {"min": 30, "max": 200},
+      "vibration": {"min": 0.001, "max": 10}
+    },
+    "generation_interval": 5.0,
+    "device_id": "sensor-1"
+  },
+  {
+    "id": "generator-2", 
+    "name": "High Activity Industrial Sensor",
+    "description": "Industrial environment with higher baseline and more frequent alerts",
+    "sensors": {
+      "pm2_5": {
+        "normal_range": [25, 45],
+        "alert_range": [80, 150],
+        "current_value": 35.0,
+        "noise_level": 0.03,
+        "fluctuation_range": 0.08
+      },
+      "pm10": {
+        "normal_range": [40, 80],
+        "alert_range": [120, 250],
+        "current_value": 60.0,
+        "noise_level": 0.03,
+        "fluctuation_range": 0.08
+      },
+      "dBA": {
+        "normal_range": [70, 85],
+        "alert_range": [90, 110],
+        "current_value": 77.5,
+        "noise_level": 0.02,
+        "fluctuation_range": 0.05
+      },
+      "vibration": {
+        "normal_range": [0.05, 0.15],
+        "alert_range": [0.2, 0.5],
+        "current_value": 0.1,
+        "noise_level": 0.15,
+        "fluctuation_range": 0.25
+      }
+    },
+    "frequencies": {
+      "anomaly_every": [50, 100],
+      "alert_every": [150, 300],
+      "drift_chance": 0.01,
+      "drift_duration": [80, 150]
+    },
+    "anomaly_behavior": {
+      "spike_multiplier": [2.0, 4.0],
+      "drop_multiplier": [0.05, 0.3],
+      "spike_chance": 0.7
+    },
+    "drift_behavior": {
+      "amount_range": [0.002, 0.005],
+      "description": "Higher drift for industrial environment"
+    },
+    "value_validation": {
+      "pm2_5": {"min": 0.1, "max": 1000},
+      "pm10": {"min": 0.1, "max": 2000},
+      "dBA": {"min": 30, "max": 200},
+      "vibration": {"min": 0.001, "max": 10}
+    },
+    "generation_interval": 3.0,
+    "device_id": "sensor-2"
+  },
+  {
+    "id": "generator-3",
+    "name": "Clean Environment Sensor",
+    "description": "Clean environment with very low baseline and rare alerts",
+    "sensors": {
+      "pm2_5": {
+        "normal_range": [5, 15],
+        "alert_range": [30, 60],
+        "current_value": 10.0,
+        "noise_level": 0.01,
+        "fluctuation_range": 0.03
+      },
+      "pm10": {
+        "normal_range": [10, 30],
+        "alert_range": [50, 100],
+        "current_value": 20.0,
+        "noise_level": 0.01,
+        "fluctuation_range": 0.03
+      },
+      "dBA": {
+        "normal_range": [45, 60],
+        "alert_range": [70, 85],
+        "current_value": 52.5,
+        "noise_level": 0.005,
+        "fluctuation_range": 0.02
+      },
+      "vibration": {
+        "normal_range": [0.005, 0.02],
+        "alert_range": [0.05, 0.15],
+        "current_value": 0.0125,
+        "noise_level": 0.05,
+        "fluctuation_range": 0.1
+      }
+    },
+    "frequencies": {
+      "anomaly_every": [200, 400],
+      "alert_every": [600, 1000],
+      "drift_chance": 0.002,
+      "drift_duration": [150, 300]
+    },
+    "anomaly_behavior": {
+      "spike_multiplier": [1.2, 2.0],
+      "drop_multiplier": [0.2, 0.6],
+      "spike_chance": 0.3
+    },
+    "drift_behavior": {
+      "amount_range": [0.0005, 0.0015],
+      "description": "Minimal drift for clean environment"
+    },
+    "value_validation": {
+      "pm2_5": {"min": 0.1, "max": 1000},
+      "pm10": {"min": 0.1, "max": 2000},
+      "dBA": {"min": 30, "max": 200},
+      "vibration": {"min": 0.001, "max": 10}
+    },
+    "generation_interval": 8.0,
+    "device_id": "sensor-3"
+  }
+] 

@@ -1,0 +1,33 @@
+# Core dependencies
+pandas
+numpy
+scikit-learn
+openai
+requests
+boto3
+
+# Logging
+python-json-logger
+
+# Environment variable support
+python-dotenv
+
+# API service
+fastapi
+uvicorn
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Optional visualization (MVP)
+streamlit
+
+# Message queue
+pika
+
+# Statistical analysis
+statsmodels
+
+# HTTP client for ML service
+aiohttp 
