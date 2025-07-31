@@ -109,7 +109,7 @@ For details about logging journey please refer to [System Logging](./monitoring/
 
 #### **1. Clone and Setup**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/shidsaa/Outcomex.git
 cd Outcomex
 cp env.example .env
 nano .env
